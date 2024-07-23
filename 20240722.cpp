@@ -1,6 +1,6 @@
-// 1Â÷¿ø ¹è¿­, if¹®
+// 1ì°¨ì› ë°°ì—´, ifë¬¸
 //#include <stdio.h>
-// µÎ º¯¼ö Áß¿¡ °¡Àå Å« ¼ö
+// ë‘ ë³€ìˆ˜ ì¤‘ì— ê°€ì¥ í° ìˆ˜
 //int main()
 //{
 //	int one = 1, two = 2;
@@ -16,9 +16,9 @@
 //}
 
 //#include <stdio.h>
-// ¼¼ º¯¼ö Áß¿¡ °¡Àå Å« ¼ö
+// ì„¸ ë³€ìˆ˜ ì¤‘ì— ê°€ì¥ í° ìˆ˜
 //int main()
-//{	// °ª ¹Ù²ã¼­ ½ÇÇàÇØº¸±â
+//{	// ê°’ ë°”ê¿”ì„œ ì‹¤í–‰í•´ë³´ê¸°
 //	int one = 1, two = 3, three = 2;
 //	int max = 0;
 //
@@ -40,13 +40,13 @@
 //}
 
 //#include <stdio.h>
-// N°³ º¯¼ö Áß¿¡ °¡Àå Å« ¼ö
+// Nê°œ ë³€ìˆ˜ ì¤‘ì— ê°€ì¥ í° ìˆ˜
 //int main()
-//{	// array(=¹è¿­)ÀÇ ¾àÀÚ·Î arrÀÌ³ª a¸¦ »ç¿ë
+//{	// array(=ë°°ì—´)ì˜ ì•½ìë¡œ arrì´ë‚˜ aë¥¼ ì‚¬ìš©
 //	int arr[3] = { 1, 3, 2 };
-//	int max = 0;
+//	int max = arr[0];
 //
-//	for (int i = 0; i < 3; i++) {
+//	for (int i = 1; i < 3; i++) {
 //		if (max < arr[i])
 //			max = arr[i];
 //	}
@@ -55,18 +55,18 @@
 //	return 0;
 //}
 
-// 1Â÷¿ø ¹è¿­, if¹® ¹®Á¦1
+// 1ì°¨ì› ë°°ì—´, ifë¬¸ ë¬¸ì œ1
 //#include <stdio.h>
 //
 //int main()
 //{
 //	int arr[5] = { 1, 3, 6, 4, 2 };
-//	int max = 0;
-//	int min = 10;
-//	int sum = 0;
+//	int max = arr[0];
+//	int min = arr[0];
+//	int sum = arr[0];
 //	double avg = 0;
 //
-//	for (int i = 0; i < 5; i++) {
+//	for (int i = 1; i < 5; i++) {
 //		if (max < arr[i])
 //			max = arr[i];
 //		if (min > arr[i])
@@ -77,15 +77,15 @@
 //
 //	avg = (double)sum / 5;
 //
-//	printf("ÃÖ´ë°ª : %d\n", max);
-//	printf("ÃÖ¼Ò°ª : %d\n", min);
-//	printf("ÃÑÇÕ : %d\n", sum);
-//	printf("Æò±Õ : %.2lf\n", avg);
+//	printf("ìµœëŒ€ê°’ : %d\n", max);
+//	printf("ìµœì†Œê°’ : %d\n", min);
+//	printf("ì´í•© : %d\n", sum);
+//	printf("í‰ê·  : %.2lf\n", avg);
 //
 //	return 0;
 //}
 
-// 1Â÷¿ø ¹è¿­ ¹®Á¦2
+// 1ì°¨ì› ë°°ì—´ ë¬¸ì œ2
 //#include <stdio.h>
 //
 //int main()
@@ -94,29 +94,19 @@
 //	int num[6] = { 0, 0, 0, 0, 0, 0 };
 //
 //	for (int i = 0; i < 10; i++) {
-//		switch (arr[i]) {
-//		case 1: num[0] += 1;
-//			break;
-//		case 2: num[1] += 1;
-//			break;
-//		case 3: num[2] += 1;
-//			break;
-//		case 4: num[3] += 1;
-//			break;
-//		case 5: num[4] += 1;
-//			break;
-//		case 6: num[5] += 1;
-//			break;
+//		for (int j = 1; j <= 6; j++) {
+//			if (arr[i] == j)
+//				num[j - 1] += 1;
 //		}
 //	}
 //
-//	printf("°¢ ÁÖ»çÀ§ ´«ÀÌ ³ª¿Â È½¼ö\n");
-//	printf("1 : %d¹ø, 2 : %d¹ø, 3 : %d¹ø, 4 : %d¹ø, 5 : %d¹ø, 6 : %d¹ø\n", num[0], num[1], num[2], num[3], num[4], num[5]);
+//	printf("ê° ì£¼ì‚¬ìœ„ ëˆˆì´ ë‚˜ì˜¨ íšŸìˆ˜\n");
+//	printf("1 : %dë²ˆ, 2 : %dë²ˆ, 3 : %dë²ˆ, 4 : %dë²ˆ, 5 : %dë²ˆ, 6 : %dë²ˆ\n", num[0], num[1], num[2], num[3], num[4], num[5]);
 //
 //	return 0;
 //}
 
-// 2Â÷¿ø ¹è¿­
+// 2ì°¨ì› ë°°ì—´
 //#include <stdio.h>
 //
 //int main()
@@ -150,7 +140,7 @@
 //		{ 84, 7, 41, 11 }		// arr2d[4]
 //	};
 //
-//	// 2Â÷¿ø ¹è¿­ÀÇ ¿ä¼Ò¸¦ ÇÏ³ª¾¿ Ãâ·Â
+//	// 2ì°¨ì› ë°°ì—´ì˜ ìš”ì†Œë¥¼ í•˜ë‚˜ì”© ì¶œë ¥
 //	for (int i = 0; i < 5; i++) {
 //		for (int j = 0; j < 4; j++) {
 //			printf("%3d ", arr2d[i][j]);
@@ -161,7 +151,7 @@
 //	return 0;
 //}
 
-// 2Â÷¿ø ¹è¿­ ¹®Á¦1
+// 2ì°¨ì› ë°°ì—´ ë¬¸ì œ1
 //#include <stdio.h>
 //
 //int main()
